@@ -1,0 +1,212 @@
+/* Search */
+.search-div {
+  height: 60px;
+  position: relative;
+  margin-right: 100px;
+}
+
+.container-animation_search {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.search-input {
+  height: 45px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  color: var(--color3);
+  padding-right: 0px;
+  margin-top: 16px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  background: none;
+  z-index: 3;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.search-input_on {
+  width: 400px;
+  z-index: 1;
+  border-bottom: 1px solid rgb(187, 187, 187);
+}
+
+.search-input:focus:hover {
+  border-bottom: 1px solid var(--color3);
+}
+
+.search-input:focus {
+  cursor: text;
+}
+
+.search-input::placeholder {
+  color: var(--color3);
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+.search-submit {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 55px;
+  background: url(../img/Search.svg) center center no-repeat;
+  filter: invert(1);
+  text-indent: -10000px;
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.4s;
+  opacity: 0.4;
+  margin-top: 5px;
+}
+
+.search-submit:hover {
+  opacity: 0.8;
+}
+
+.search-submit:focus-visible {
+  outline: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.find-list {
+  list-style-type: none;
+  z-index: 20;
+  background-color: var(--color2);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+  left: -450px;
+  top: 70px;
+  width: 400px;
+  max-height: 200px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  overflow-y: scroll;
+  transition: 0.4s;
+}
+
+.find-list::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  outline: none;
+}
+
+.find-list::-webkit-scrollbar-track {
+  background-color: var(--color2);
+}
+
+.find-list::-webkit-scrollbar-thumb {
+  background-color: var(--color1);
+}
+
+.find-item {
+  position: relative;
+}
+
+.find-link {
+  color: var(--color3);
+  text-shadow: 1px 1px 1px var(--color4);
+}
+
+.find-link:hover {
+  color: var(--color11);
+}
+
+.find-link:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.mark {
+  background-color: var(--color1);
+  color: var(--color3);
+}
+
+.find-link:hover .mark {
+  color: var(--color11);
+}
+
+.find-icon_edit {
+  position: absolute;
+  left: 95%;
+  top: 0px;
+  width: 15px;
+  height: 15px;
+  fill: var(--color11);
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .search-div {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .search-div {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 952px) {
+  .search-input_on {
+    width: 250px;
+    z-index: 1;
+    border-bottom: 1px solid rgb(187, 187, 187);
+  }
+  .find-list {
+    width: 250px;
+    left: -300px;
+  }
+}
+
+@media (max-width: 790px) {
+  .search-input_on {
+    width: 220px;
+    z-index: 1;
+    border-bottom: 1px solid rgb(187, 187, 187);
+  }
+  .find-list {
+    width: 220px;
+    left: -270px;
+  }
+}
+
+@media (max-width: 761px) {
+  .search-div {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 732px) {
+  .search-input_on {
+    width: 160px;
+    z-index: 1;
+    border-bottom: 1px solid rgb(187, 187, 187);
+  }
+  .search-input::placeholder {
+    font-size: 12px;
+  }
+  .find-list {
+    width: 160px;
+    left: -210px;
+    font-size: 13px;
+    padding-left: 5px;
+  }
+}

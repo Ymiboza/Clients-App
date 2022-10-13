@@ -1,0 +1,32 @@
+.modal-id {
+  color: var(--color3);
+  text-shadow: 1px 1px 1px var(--color4);
+}
+
+.correct-height {
+  top: 65%;
+}
+
+.animation-edit-modal_title {
+  animation: animation-edit-modal_title-typewriter 1.5s steps(44) 0.5s 1 normal
+      both,
+    animation-blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes animation-edit-modal_title-typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 6.8em;
+  }
+}
+
+@keyframes animation-blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}

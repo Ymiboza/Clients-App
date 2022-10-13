@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="shortcut icon" href="src/img/Favicon.ico" />
+    <title>Clients base</title>
+    <script type="module" defer src="main.js"></script>
+  </head>
+  <body>
+    <section class="header">
+      <div id="headerContainer" class="container header-container">
+        <div class="header-logo">
+          <img src="src/img/Logo.png" class="logo-img" alt="" />
+        </div>
+
+        <h1 class="title animation-title">Clients base</h1>
+
+        <div class="search-div" id="wrap">
+          <form class="search-form" action="" autocomplete="on">
+            <input
+              class="search-input"
+              id="search"
+              name="search"
+              type="text"
+              placeholder="What're we looking for?"
+              autocomplete="off"
+            /><button class="search-submit" id="search_submit"></button>
+            <ul class="find-list hide"></ul>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="main">
+      <div id="container" class="container main-container">
+        <h2 id="tableTitle" class="table-title_big animation-table-title_big">
+          Clients table
+        </h2>
+        <div class="table-wrapper">
+          <table class="table clients-table">
+            <thead class="table-head">
+              <th data-type="id" id="id" class="table-title sort-down">
+                ID
+                <svg
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m9.001 13.022h-3.251c-.412 0-.75.335-.75.752 0 .188.071.375.206.518 1.685 1.775 4.692 4.945 6.069 6.396.189.2.452.312.725.312.274 0 .536-.112.725-.312 1.377-1.451 4.385-4.621 6.068-6.396.136-.143.207-.33.207-.518 0-.417-.337-.752-.75-.752h-3.251v-9.02c0-.531-.47-1.002-1-1.002h-3.998c-.53 0-1 .471-1 1.002zm4.498-8.522v10.022h3.008l-4.507 4.751-4.507-4.751h3.008v-10.022z"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </th>
+              <th data-type="fio" id="fio" class="table-title sort-down">
+                FULL NAME
+                <svg
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m9.001 13.022h-3.251c-.412 0-.75.335-.75.752 0 .188.071.375.206.518 1.685 1.775 4.692 4.945 6.069 6.396.189.2.452.312.725.312.274 0 .536-.112.725-.312 1.377-1.451 4.385-4.621 6.068-6.396.136-.143.207-.33.207-.518 0-.417-.337-.752-.75-.752h-3.251v-9.02c0-.531-.47-1.002-1-1.002h-3.998c-.53 0-1 .471-1 1.002zm4.498-8.522v10.022h3.008l-4.507 4.751-4.507-4.751h3.008v-10.022z"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </th>
+              <th
+                data-type="dateCreation"
+                id="dateCreation"
+                class="table-title sort-down"
+              >
+                DATE CREATION
+                <svg
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m9.001 13.022h-3.251c-.412 0-.75.335-.75.752 0 .188.071.375.206.518 1.685 1.775 4.692 4.945 6.069 6.396.189.2.452.312.725.312.274 0 .536-.112.725-.312 1.377-1.451 4.385-4.621 6.068-6.396.136-.143.207-.33.207-.518 0-.417-.337-.752-.75-.752h-3.251v-9.02c0-.531-.47-1.002-1-1.002h-3.998c-.53 0-1 .471-1 1.002zm4.498-8.522v10.022h3.008l-4.507 4.751-4.507-4.751h3.008v-10.022z"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </th>
+              <th
+                data-type="dateChanges"
+                id="dateChanges"
+                class="table-title sort-down"
+              >
+                DATE CHANGES
+                <svg
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="2"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m9.001 13.022h-3.251c-.412 0-.75.335-.75.752 0 .188.071.375.206.518 1.685 1.775 4.692 4.945 6.069 6.396.189.2.452.312.725.312.274 0 .536-.112.725-.312 1.377-1.451 4.385-4.621 6.068-6.396.136-.143.207-.33.207-.518 0-.417-.337-.752-.75-.752h-3.251v-9.02c0-.531-.47-1.002-1-1.002h-3.998c-.53 0-1 .471-1 1.002zm4.498-8.522v10.022h3.008l-4.507 4.751-4.507-4.751h3.008v-10.022z"
+                    fill-rule="nonzero"
+                  />
+                </svg>
+              </th>
+              <td
+                data-type="contacts"
+                class="table-title sort-down table-title_contacts"
+              >
+                CONTACTS
+              </td>
+              <td
+                data-type="action"
+                class="table-title sort-down table-title_action"
+              >
+                ACTION
+              </td>
+            </thead>
+            <tbody id="clientsList" class="table-body"></tbody>
+          </table>
+        </div>
+        <div class="btn-add_container">
+          <button class="btn-add_client">ADD Client</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

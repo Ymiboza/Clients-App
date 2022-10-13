@@ -1,0 +1,73 @@
+.delete-modal_text {
+  color: var(--color3);
+  font-family: "AnonymousPro-Bold";
+  font-style: normal;
+  text-align: center;
+  font-size: 18px;
+  overflow: hidden;
+  transform: translateY(-50%);
+  transition: 0.4s;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-shadow: 1px 1px 1px var(--color4);
+}
+
+.delete-modal_delete {
+  color: var(--color3);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 55px;
+  text-decoration: none;
+  text-align: center;
+  align-self: center;
+  border: none;
+  background: var(--color1);
+  box-shadow: 2px 2px 0px var(--color4), 2px 4px 6px var(--color4);
+  text-shadow: 1px 1px 1px var(--color4);
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: 0.4s;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.delete-modal_delete:hover {
+  background: var(--color7);
+  border: 1px solid rgba(#000, 0.05);
+  text-shadow: 1px 1px 1px var(--color4);
+}
+
+.delete-modal_delete:active {
+  background: var(--color6);
+  border: 1px solid rgba(#000, 0.05);
+  box-shadow: 0.2rem 0.2rem 0rem var(--color4);
+  color: var(--color3);
+  text-decoration: none;
+  transition: 0.2s;
+  transform: translate(0.1rem, 0.1rem);
+}
+
+.animation-delete-modal_title {
+  animation: animation-delete-modal_title-typewriter 1.5s steps(44) 0.5s 1
+      normal both,
+    animation-blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes animation-delete-modal_title-typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7.5em;
+  }
+}
+
+@keyframes animation-blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}

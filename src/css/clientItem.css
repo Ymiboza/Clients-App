@@ -1,0 +1,886 @@
+.client-item {
+  color: var(--color3);
+}
+
+.client-item:hover {
+  background-color: var(--color8);
+  color: var(--color3);
+  text-shadow: 1px 2px 2px var(--color4);
+}
+
+.client-id {
+  font-size: 14px;
+  color: var(--color8);
+}
+
+.client-fio {
+  max-width: 320px;
+  min-width: 320px;
+}
+
+.client-item:hover .client-fio {
+  font-size: 17px;
+  transition: transform 0.3s, font-size 0.3s;
+}
+
+.client-fio span:not(:last-child) {
+  margin-right: 10px;
+}
+
+.client-created {
+  max-width: 100px;
+  min-width: 100px;
+}
+
+.client-changed {
+  max-width: 100px;
+  min-width: 100px;
+}
+
+.created-date,
+.changed-date {
+  padding-right: 5px;
+  border-right: 2px solid var(--color1);
+}
+
+.created-time,
+.changed-time {
+  padding-left: 5px;
+  font-size: 14px;
+  color: var(--color8);
+}
+
+.client-item:hover .created-date {
+  font-size: 18px;
+  transition: font-size 0.3s;
+}
+
+.client-item:hover .changed-date {
+  font-size: 18px;
+  transition: font-size 0.3s;
+}
+
+.client-contact {
+  max-width: 90px;
+  min-width: 90px;
+}
+
+.client-contact svg {
+  width: 14px;
+  height: 14px;
+  transition: 0.4s;
+}
+
+.contact-link:hover svg {
+  width: 15px;
+  height: 15px;
+}
+
+.client-contact svg path {
+  fill: var(--color5);
+}
+
+.contact-link {
+  margin-right: 10px;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.contact-link:hover svg path {
+  fill: var(--color3);
+  stroke: var(--color1);
+  stroke-width: 8px;
+  margin-right: 0px;
+}
+
+.contact-link:active svg path {
+  fill: var(--color1);
+  stroke: var(--color4);
+  stroke-width: 8px;
+  margin-right: 0px;
+}
+
+.client-action {
+  max-width: 80px;
+  min-width: 80px;
+  padding-left: 0px;
+  position: relative;
+}
+
+.client-edit,
+.client-remove {
+  border: none;
+  background-color: transparent;
+  padding-left: 0px;
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.client-edit {
+  margin-right: 15px;
+}
+
+.client-edit_svg svg,
+.client-remove_svg svg {
+  width: 30px;
+  height: 30px;
+  transition: 0.4s;
+}
+
+.client-edit_svg svg path,
+.client-remove_svg svg path {
+  fill: var(--color5);
+}
+
+.client-edit_svg:hover svg path {
+  stroke: var(--color11);
+  stroke-width: 3px;
+  fill: var(--color11);
+}
+
+.client-remove_svg:hover svg path {
+  stroke: var(--color6);
+  stroke-width: 3px;
+  fill: var(--color6);
+}
+
+.client-edit_svg:active svg path {
+  stroke: var(--color12);
+  stroke-width: 3px;
+  fill: var(--color12);
+}
+
+.client-remove_svg:active svg path {
+  stroke: var(--color7);
+  stroke-width: 3px;
+  fill: var(--color7);
+}
+
+.edit-spinner_wrapper {
+  position: absolute;
+  display: none;
+  top: 5px;
+}
+
+.edit-spinner_box {
+  width: 28px;
+  height: 30px;
+  background: var(--color2);
+  animation: animate 0.5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--color11);
+  border-radius: 3px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(7px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(10px) scale(1, 0.9) rotate(180deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(7px) rotate(280deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.edit-spinner_shadow {
+  width: 28px;
+  height: 5px;
+  background: var(--color4);
+  opacity: 0.2;
+  position: absolute;
+  top: 35px;
+  border-radius: 50%;
+  animation: shadow 0.4s linear infinite;
+}
+@keyframes shadow {
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+.edit-spinner_line1 {
+  width: 12px;
+  height: 2px;
+  background-color: var(--color11);
+  margin-top: 5px;
+}
+
+.edit-spinner_line2 {
+  width: 12px;
+  height: 2px;
+  background-color: var(--color11);
+  margin-top: 5px;
+}
+
+.edit-spinner_line3 {
+  width: 12px;
+  height: 2px;
+  background-color: var(--color11);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.remove-spinner_wrapper {
+  position: absolute;
+  display: none;
+  top: 5px;
+}
+
+.remove-spinner_box {
+  width: 28px;
+  height: 30px;
+  background: var(--color2);
+  animation: animate 0.5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--color6);
+  border-radius: 3px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(7px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(10px) scale(1, 0.9) rotate(180deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(7px) rotate(280deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.remove-spinner_shadow {
+  width: 28px;
+  height: 5px;
+  background: var(--color4);
+  opacity: 0.2;
+  position: absolute;
+  top: 35px;
+  border-radius: 50%;
+  animation: shadow 0.4s linear infinite;
+}
+@keyframes shadow {
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+.remove-spinner_line1 {
+  width: 12px;
+  height: 2px;
+  background-color: var(--color6);
+  margin-top: 5px;
+}
+
+.remove-spinner_line2 {
+  width: 12px;
+  height: 2px;
+  background-color: var(--color6);
+  margin-top: 5px;
+}
+
+.remove-spinner_line3 {
+  width: 12px;
+  height: 2px;
+  background-color: var(--color6);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1399px) {
+  .client-fio {
+    max-width: 200px;
+    min-width: 200px;
+  }
+
+  .client-created {
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .client-changed {
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .client-contact {
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .client-contact svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .contact-link:hover svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .contact-link {
+    margin-right: 7px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .client-action {
+    max-width: 70px;
+    min-width: 70px;
+    padding-left: 0px;
+    position: relative;
+  }
+
+  .client-edit {
+    margin-right: 5px;
+  }
+
+  .client-edit_svg svg,
+  .client-remove_svg svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .edit-spinner_box {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--color11);
+  }
+
+  .edit-spinner_shadow {
+    width: 30px;
+    height: 5px;
+    top: 40px;
+  }
+
+  .edit-spinner_line1 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .edit-spinner_line2 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .edit-spinner_line3 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .remove-spinner_box {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--color6);
+  }
+
+  .remove-spinner_shadow {
+    width: 30px;
+    height: 5px;
+    top: 40px;
+  }
+
+  .remove-spinner_line1 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .remove-spinner_line2 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .remove-spinner_line3 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 1058px) {
+  .client-contact svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .contact-link:hover svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .client-id {
+    font-size: 12px;
+  }
+
+  .client-fio {
+    max-width: 150px;
+    min-width: 150px;
+    font-size: 15px;
+  }
+
+  .client-item:hover .client-fio {
+    font-size: 16px;
+    transition: transform 0.3s, font-size 0.3s;
+  }
+
+  .client-created {
+    font-size: 14px;
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .client-changed {
+    font-size: 14px;
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .created-time,
+  .changed-time {
+    font-size: 13px;
+  }
+
+  .client-item:hover .created-date {
+    font-size: 16px;
+    transition: font-size 0.3s;
+  }
+
+  .client-item:hover .changed-date {
+    font-size: 16px;
+    transition: font-size 0.3s;
+  }
+
+  .client-contact {
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .client-contact svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .contact-link:hover svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .contact-link {
+    margin-right: 7px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .client-action {
+    max-width: 70px;
+    min-width: 70px;
+    padding-left: 0px;
+    position: relative;
+  }
+
+  .client-edit {
+    margin-right: 5px;
+  }
+
+  .client-edit_svg svg,
+  .client-remove_svg svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .edit-spinner_box {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--color11);
+  }
+
+  .edit-spinner_shadow {
+    width: 25px;
+    height: 5px;
+    top: 35px;
+  }
+
+  .edit-spinner_line1 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .edit-spinner_line2 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .edit-spinner_line3 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .remove-spinner_box {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--color6);
+  }
+
+  .remove-spinner_shadow {
+    width: 25px;
+    height: 5px;
+    top: 35px;
+  }
+
+  .remove-spinner_line1 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .remove-spinner_line2 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .remove-spinner_line3 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 856px) {
+  .client-contact svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .contact-link:hover svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 780px) {
+  .client-id {
+    font-size: 11px;
+  }
+
+  .client-fio {
+    max-width: 150px;
+    min-width: 150px;
+    font-size: 14px;
+  }
+
+  .client-item:hover .client-fio {
+    font-size: 15px;
+    transition: transform 0.3s, font-size 0.3s;
+  }
+
+  .client-created {
+    font-size: 13px;
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .client-changed {
+    font-size: 13px;
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .created-time,
+  .changed-time {
+    font-size: 12px;
+  }
+
+  .client-item:hover .created-date {
+    font-size: 15px;
+    transition: font-size 0.3s;
+  }
+
+  .client-item:hover .changed-date {
+    font-size: 15px;
+    transition: font-size 0.3s;
+  }
+
+  .client-contact {
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .client-contact svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .contact-link:hover svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .contact-link {
+    margin-right: 7px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .client-action {
+    max-width: 70px;
+    min-width: 70px;
+  }
+
+  .client-edit {
+    margin-right: 5px;
+  }
+
+  .client-edit_svg svg,
+  .client-remove_svg svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .edit-spinner_box {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--color11);
+    top: 5px;
+  }
+
+  .edit-spinner_shadow {
+    width: 25px;
+    height: 5px;
+    top: 40px;
+  }
+
+  .edit-spinner_line1 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .edit-spinner_line2 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .edit-spinner_line3 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .remove-spinner_box {
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--color6);
+    top: 5px;
+  }
+
+  .remove-spinner_shadow {
+    width: 25px;
+    height: 5px;
+    top: 40px;
+  }
+
+  .remove-spinner_line1 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .remove-spinner_line2 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+  }
+
+  .remove-spinner_line3 {
+    width: 10px;
+    height: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 738px) {
+  .client-id {
+    font-size: 14px;
+  }
+
+  .client-fio {
+    max-width: 250px;
+    min-width: 250px;
+    font-size: 17px;
+  }
+
+  .client-item:hover .client-fio {
+    font-size: 18px;
+    transition: transform 0.3s, font-size 0.3s;
+  }
+
+  .client-fio span:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .client-created {
+    max-width: 100px;
+    min-width: 100px;
+    font-size: 17px;
+  }
+
+  .client-changed {
+    max-width: 100px;
+    min-width: 100px;
+    font-size: 17px;
+  }
+
+  .created-time,
+  .changed-time {
+    padding-left: 5px;
+    font-size: 14px;
+  }
+
+  .client-item:hover .created-date {
+    font-size: 18px;
+    transition: font-size 0.3s;
+  }
+
+  .client-item:hover .changed-date {
+    font-size: 18px;
+    transition: font-size 0.3s;
+  }
+
+  .client-contact {
+    max-width: 90px;
+    min-width: 90px;
+  }
+
+  .client-contact svg {
+    width: 15px;
+    height: 15px;
+    transition: 0.4s;
+  }
+
+  .contact-link:hover svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .contact-link {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .client-action {
+    max-width: 80px;
+    min-width: 80px;
+  }
+
+  .client-edit {
+    margin-right: 15px;
+  }
+
+  .client-edit_svg svg,
+  .client-remove_svg svg {
+    width: 30px;
+    height: 30px;
+    transition: 0.4s;
+  }
+
+  .edit-spinner_box {
+    width: 28px;
+    height: 30px;
+  }
+
+  .edit-spinner_shadow {
+    width: 28px;
+    height: 5px;
+    top: 40px;
+  }
+
+  .edit-spinner_line1 {
+    width: 12px;
+    height: 2px;
+    margin-top: 5px;
+  }
+
+  .edit-spinner_line2 {
+    width: 12px;
+    height: 2px;
+    margin-top: 5px;
+  }
+
+  .edit-spinner_line3 {
+    width: 12px;
+    height: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .remove-spinner_box {
+    width: 28px;
+    height: 30px;
+  }
+
+  .remove-spinner_shadow {
+    width: 28px;
+    height: 5px;
+    top: 40px;
+  }
+
+  .remove-spinner_line1 {
+    width: 12px;
+    height: 2px;
+    margin-top: 5px;
+  }
+
+  .remove-spinner_line2 {
+    width: 12px;
+    height: 2px;
+    margin-top: 5px;
+  }
+
+  .remove-spinner_line3 {
+    width: 12px;
+    height: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
