@@ -59,12 +59,17 @@ export const searchClients = (clients) => {
     }
   };
 
+  let timerId;
+
   input.addEventListener("input", async () => {
+clearTimeout(timerId);
     const value = input.value.trim(),
       foundItems = document.querySelectorAll(".find-link");
 
     if (value !== "") {
-      rewriteTable(value);
+            timerId = setTimeout(() => {
+        rewriteTable(value);
+      }, 500);
       foundItems.forEach((link) => {
         if (link.innerText.search(value) === -1) {
           link.classList.add("hide");
