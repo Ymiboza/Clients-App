@@ -1,5 +1,6 @@
 .modal {
-  display: block;
+  display: flex;
+  padding: 50px;
   max-width: 20%;
 }
 
@@ -30,22 +31,19 @@
 }
 
 .all-modal_content {
-  position: absolute;
   max-width: 450px;
   cursor: auto;
   padding: 40px 45px;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
+  margin: auto;
   border-radius: 25px;
   background-color: var(--color2);
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.3);
+  transform: translate(0%, 0%) scale(0.3);
   transition: transform 0.3s ease-in-out;
 }
 
 .modal-scale {
-  transform: translate(-50%, -50%) scale(1);
+    transform: translate(0%, 0%) scale(1);
   transition: transform 0.4s ease-in-out;
 }
 
