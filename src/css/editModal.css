@@ -3,9 +3,6 @@
   text-shadow: 1px 1px 1px var(--color4);
 }
 
-.correct-height {
-  top: 65%;
-}
 
 .animation-edit-modal_title {
   animation: animation-edit-modal_title-typewriter 1.5s steps(44) 0.5s 1 normal
